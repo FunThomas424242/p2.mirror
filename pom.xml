@@ -40,8 +40,8 @@
 				<configuration>
 					<publishArtifacts>true</publishArtifacts>
 					<!-- Include pack200 artifacts -->
-					<includePacked>false</includePacked>
-					<reusePack200Files>false</reusePack200Files>
+					<includePacked>true</includePacked>
+					<reusePack200Files>true</reusePack200Files>
 				</configuration>
 				<executions>
 					<execution>
@@ -98,7 +98,6 @@
 						</goals>
 						<configuration>
 							<append>true</append>
-						<skip>true</skip>
 							<source>
 								<repository>
 									<url>file:///${project.build.directory}/old-p2-repository</url>
@@ -116,7 +115,6 @@
 							<goal>mirror</goal>
 						</goals>
 						<configuration>
-						<skip>true</skip>
 							<append>true</append>
 							<latestVersionOnly>true</latestVersionOnly> <!-- <<<< -->
 							<source>
